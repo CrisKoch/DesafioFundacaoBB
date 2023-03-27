@@ -7,9 +7,7 @@ import org.hibernate.type.EnumType;
 import org.springframework.data.annotation.Id;
 
 import jakarta.persistence.CollectionTable;
-import jakarta.persistence.Column;
 import jakarta.persistence.ElementCollection;
-import jakarta.persistence.Embeddable;
 import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Enumerated;
@@ -17,6 +15,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
 
 @Entity
 @Table(name="cisterna")
@@ -25,11 +24,11 @@ public class Cisterna {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotNull
+    //@NotNull
     private LocalDate dataInauguracao;
 
-    @NotNull
-    @Enumerated(EnumType.STRING)
+    //@NotNull
+    //@Enumerated(EnumType.STRING)
     private TipoConstrucao tipoConstrucao;
 
     @ElementCollection
